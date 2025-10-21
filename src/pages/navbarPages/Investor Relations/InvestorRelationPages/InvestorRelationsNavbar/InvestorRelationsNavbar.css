@@ -1,0 +1,113 @@
+/* === Base Navbar === */
+.ir-navbar {
+  background-color: #0b1620;
+  padding: 0.7rem 4rem;
+  color: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* === Container === */
+.ir-navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* === Logo === */
+.ir-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.ir-logo img {
+  height: 40px;
+  cursor: pointer;
+}
+
+/* === Links === */
+.ir-links {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Make spans behave like links */
+.ir-links span {
+  color: white;
+  font-weight: 300;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.ir-links span:hover {
+  color: #00c853;
+  transform: translateY(-1px);
+}
+
+/* === Dropdown Containers === */
+.ir-dropdown-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ir-dropdown-container > span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* === Dropdown Content === */
+.ir-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 1rem;
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  border-radius: 8px;
+}
+
+.ir-dropdown-content span {
+  color: black;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.ir-dropdown-content span:hover {
+  color: #00c853;
+  transform: translateX(3px);
+}
+
+/* === Arrow Icon === */
+.arrow-icon {
+  font-size: 1.1rem;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .ir-navbar-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ir-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,105 @@
+.ola-community-container {
+  padding: 5% 4rem;
+  margin: 5% 0;
+  background-color: #ecf8f8;
+}
+
+.ola-community-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.ola-community-subtext {
+  color: #707575;
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+/* Cards container */
+.ola-community-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+/* Single card - compact */
+.ola-community-card {
+  flex: 1;
+  max-width: 30%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.ola-community-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Circle image */
+.ola-community-video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.3rem;
+}
+
+.ola-community-img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Play button */
+.ola-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #d9f3f3;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #004d4d;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.ola-play-button:hover {
+  background: #b6ebeb;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Title */
+.ola-community-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .ola-community-card-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ola-community-card {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .ola-community-card {
+    max-width: 100%;
+  }
+}

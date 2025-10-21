@@ -1,0 +1,89 @@
+/* Matches Cards Section Spacing */
+.emi-section {
+  padding: 8% 4rem 0 4rem;
+  margin: 8% 0;
+  background-color: #ecf8f8;
+  text-align: left;
+}
+
+.emi-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.emi-subtitle {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+.emi-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 2rem 0;
+  gap: 1.5rem;
+}
+
+.emi-detail-box {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.emi-label {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.emi-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00a651;
+}
+
+.calculate {
+  margin: 8% 0% !important;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .emi-title {
+    font-size: 2rem;
+  }
+
+  .emi-details {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .emi-value {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .emi-title {
+    font-size: 1.75rem;
+  }
+
+  .emi-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .emi-section {
+    padding: 0 1.5rem;
+  }
+}

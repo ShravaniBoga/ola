@@ -1,0 +1,44 @@
+.short-cards-container {
+  padding: 0 4rem;
+  margin-bottom: 8%;
+  background-color: #f3f7f9;
+}
+
+.short-cards-heading {
+  padding-top: 8%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.short-cards-heading-image {
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+
+.short-card-single {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.short-card-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.short-card-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.subline {
+  margin: 5% 0px;
+  text-align: center;
+  color: rgb(113, 117, 117);
+}

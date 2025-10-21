@@ -1,0 +1,83 @@
+.city-container {
+  padding: 0 4rem;
+  margin: -30px 0 8% 0;
+  background-color: #fff;
+  text-align: left; /* Align heading and grid to the left */
+}
+
+.city-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+/* Make grid smaller and left aligned */
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 26px;
+  max-width: 800px; /* smaller total width */
+}
+
+.city-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+}
+
+.city-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.city-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  border-radius: 0 0 12px 12px;
+}
+
+.city-name {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Hover zoom effect */
+.city-card:hover .city-image {
+  transform: scale(1.05);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .city-container {
+    padding: 30px 20px;
+  }
+
+  .city-heading {
+    font-size: 1.6rem;
+  }
+
+  .city-grid {
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .city-image {
+    height: 100px;
+  }
+}

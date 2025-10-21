@@ -1,0 +1,99 @@
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+
+.play-button:hover {
+  background: white;
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.play-button:active {
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Pulse animation */
+@keyframes playButtonPulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.play-button {
+  animation: playButtonPulse 2s ease-in-out infinite;
+}
+
+.play-button:hover {
+  animation: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .play-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .play-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .play-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Variant styles */
+.play-button.large {
+  width: 80px;
+  height: 80px;
+}
+
+.play-button.small {
+  width: 40px;
+  height: 40px;
+}
+
+.play-button.transparent {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.play-button.dark {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+}
+
+.play-button.dark svg {
+  color: white;
+}

@@ -1,0 +1,279 @@
+/* Carousel.css */
+
+/* Main Carousel Container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 8%;
+}
+
+/* Navbar Styles */
+.carousel-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+}
+
+.carousel-navbar img {
+  height: 40px;
+  width: auto;
+}
+
+.hamburger-icon {
+  font-size: 2rem;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon:hover {
+  color: #00b14f;
+}
+
+/* Carousel Items */
+.carousel-inner {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-item {
+  display: none;
+  width: 100%;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-slide {
+  height: 620px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Text Overlay */
+.carousel-content {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  text-align: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* Title Styles */
+.carousel-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.carousel-subtitle {
+  font-size: 2rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.title-with-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-title-image {
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 1.25rem;
+}
+
+/* Description Styles */
+.carousel-description {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* Button Container */
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.875rem;
+  flex-wrap: wrap;
+}
+
+/* Indicators */
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+
+  margin-bottom: 1rem;
+}
+
+.carousel-indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #b0b0b0;
+}
+
+.carousel-indicator.active {
+  background-color: #00b14f;
+  transform: scale(1.2);
+}
+
+.carousel-indicator:hover {
+  background-color: #808080;
+}
+
+/* Arrow Controls */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #b0b0b0;
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.carousel-arrow:hover {
+  background-color: #999999;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow-prev {
+  left: 1.25rem;
+}
+
+.carousel-arrow-next {
+  right: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-slide {
+    height: 500px;
+  }
+
+  .carousel-content {
+    top: 30%;
+  }
+
+  .carousel-title {
+    font-size: 2rem;
+  }
+
+  .carousel-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .carousel-description {
+    font-size: 1rem;
+  }
+
+  .carousel-title-image {
+    max-width: 80%;
+  }
+
+  .carousel-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide {
+    height: 400px;
+  }
+
+  .carousel-content {
+    top: 35%;
+  }
+
+  .carousel-title {
+    font-size: 1.5rem;
+  }
+
+  .carousel-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .carousel-description {
+    font-size: 0.9rem;
+  }
+
+  .carousel-navbar {
+    padding: 0.75rem;
+  }
+
+  .carousel-navbar img {
+    height: 30px;
+  }
+
+  .hamburger-icon {
+    font-size: 1.5rem;
+  }
+
+  .carousel-arrow {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .carousel-arrow-prev {
+    left: 0.5rem;
+  }
+
+  .carousel-arrow-next {
+    right: 0.5rem;
+  }
+}
+
+/* Animation for slide transitions */
+.carousel-item {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item:not(.active) {
+  opacity: 0;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}

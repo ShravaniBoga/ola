@@ -1,0 +1,30 @@
+.grid-cards-container {
+  padding: 5% 4rem;
+  margin: 5% 0;
+  padding-bottom: 4%;
+  background-color: #16142b;
+  text-align: center;
+  color: #fff;
+}
+
+.grid-cards-heading {
+  padding-top: 8%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.grid-card-single {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.grid-card-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
