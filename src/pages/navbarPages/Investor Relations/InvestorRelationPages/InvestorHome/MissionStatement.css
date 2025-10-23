@@ -1,0 +1,55 @@
+.mission-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #f4f6f8;
+}
+
+.mission-container {
+  padding: 5% 4rem;
+  margin: 5% 0;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.mission-text {
+  font-size: 2rem;
+  line-height: 1.4;
+  color: #1b1b1b;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.mission-link {
+  font-size: 1.2rem;
+  color: #00a651;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mission-link:hover {
+  color: #008c45;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .mission-text {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-container {
+    padding: 8% 2rem;
+  }
+
+  .mission-text {
+    font-size: 1.4rem;
+  }
+
+  .mission-link {
+    font-size: 1rem;
+  }
+}

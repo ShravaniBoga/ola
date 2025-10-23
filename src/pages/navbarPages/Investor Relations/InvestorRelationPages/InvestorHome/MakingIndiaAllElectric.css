@@ -1,0 +1,97 @@
+.electric-section {
+  width: 100%;
+  background-color: #f5f8fa;
+}
+
+.electric-container {
+  padding: 5% 4rem;
+  margin: 5% 0;
+  max-width: 1300px;
+  margin-inline: auto;
+}
+
+.electric-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #1b1b1b;
+}
+
+.electric-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.electric-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.text-card {
+  padding: 2rem;
+}
+
+.text-card h3 {
+  font-size: 1.5rem;
+  color: #1b1b1b;
+  margin-bottom: 1rem;
+}
+
+.text-card p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.learn-link {
+  color: #00a651;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.learn-link:hover {
+  color: #008c45;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .electric-grid {
+    gap: 1rem;
+  }
+
+  .electric-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .electric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .electric-card {
+    flex-direction: column;
+  }
+
+  .electric-heading {
+    font-size: 1.8rem;
+  }
+
+  .text-card {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,161 @@
+/* === Base Layout === */
+.test-ride-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Left Side (Image) === */
+.test-ride-left {
+  flex: 1;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.test-ride-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Right Side (Form) === */
+.test-ride-right {
+  flex: 1;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 4rem;
+  /* margin: 5% 0; */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.test-ride-form-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.test-ride-form-wrapper h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.test-ride-form-wrapper p {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+/* === Form === */
+.test-ride-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input {
+  width: 100%;
+}
+
+.input input,
+.input select {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.phone-input .flag {
+  background-color: #f8f8f8;
+  padding: 0.9rem;
+  border-right: 1px solid #ccc;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.phone-input input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 0.9rem;
+}
+
+/* === Row Inputs === */
+.input-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* === Button === */
+button {
+  padding: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+/* === Disclaimer === */
+.disclaimer {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .test-ride-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .test-ride-left,
+  .test-ride-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .test-ride-left {
+    height: 40vh;
+  }
+
+  .test-ride-right {
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+}

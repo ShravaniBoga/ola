@@ -1,0 +1,129 @@
+/* === Overlay (background dimmed) === */
+.signin-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(20, 20, 20, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+/* === Modal box === */
+.signin-modal {
+  position: relative;
+  width: 380px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease;
+  text-align: left;
+}
+
+/* === Close Button === */
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* === Titles === */
+.signin-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #072b45;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.signin-subtitle {
+  font-size: 14px;
+  color: #5a5a5a;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* === Input Container === */
+.input-container {
+  display: flex;
+  align-items: center;
+  background: #f5f6f8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 25px;
+}
+
+.flag-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-right: 1px solid #ddd;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.flag-img {
+  width: 22px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.country-code {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.phone-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 15px;
+  color: #555;
+}
+
+/* === Button === */
+.next-btn {
+  width: 100%;
+  background: #6f7375;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+  background: #5b5e60;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

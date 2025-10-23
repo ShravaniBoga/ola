@@ -1,0 +1,145 @@
+.ir-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5% 4rem;
+  margin: 5% 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f9fafc, #eef3f8);
+  box-sizing: border-box;
+  gap: 3rem;
+  overflow-x: hidden;
+}
+
+/* === Left Section === */
+.ir-main-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ir-main-left h4 {
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.ir-main-left h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 2rem;
+}
+
+.ir-main-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ir-main-btn:hover {
+  background: #333;
+}
+
+.ir-main-btn .arrow-icon {
+  margin-left: 0.6rem;
+  font-size: 1.1rem;
+}
+
+/* === Right Section === */
+.ir-main-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.ir-main-right h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+/* === Cards === */
+.ir-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  padding: 1rem 1.3rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ir-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ir-icon {
+  font-size: 1.2rem;
+  color: #000;
+  margin-right: 1rem;
+}
+
+.ir-card span {
+  flex: 1;
+  font-size: 1rem;
+  color: #0a0a0a;
+  font-weight: 500;
+}
+
+.ir-arrow {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .ir-main {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+  }
+
+  .ir-main-left h1 {
+    font-size: 2.3rem;
+  }
+
+  .ir-main-right {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .ir-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .ir-main-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .ir-main-btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+}

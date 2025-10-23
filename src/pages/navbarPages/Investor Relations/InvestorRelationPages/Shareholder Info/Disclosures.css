@@ -1,0 +1,64 @@
+.disclosures-container {
+  padding: 5% 4rem;
+  margin: 5% 0;
+}
+
+.disclosures-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #002c55;
+  margin-bottom: 2rem;
+}
+
+.disclosures-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.disclosure-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.disclosure-item:hover {
+  background-color: #f8f8f8;
+}
+
+.disclosure-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #002c55;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.disclosure-icon {
+  font-size: 1.3rem;
+  color: #002c55;
+}
+
+.disclosure-arrow {
+  font-size: 1rem;
+  color: #002c55;
+}
+
+@media (max-width: 768px) {
+  .disclosures-container {
+    padding: 8% 2rem;
+  }
+
+  .disclosures-title {
+    font-size: 1.6rem;
+  }
+
+  .disclosure-left {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,36 @@
+.policies-section {
+  padding: 5% 4rem;
+  margin: 5% 0;
+  background-color: #f9fbfd;
+}
+
+.policies-container {
+  max-width: 1300px;
+  margin-inline: auto;
+}
+
+.policies-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #001b33;
+}
+
+.policies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .policies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .policies-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,83 @@
+.news-events-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
+  color: #111;
+}
+
+/* ---------- HEADER ---------- */
+.news-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+}
+
+.ola-logo {
+  height: 36px;
+  cursor: pointer;
+}
+
+.hamburger {
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* ---------- TITLE SECTION ---------- */
+.news-title-section {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.news-heading {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.news-subheading {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0.6rem;
+}
+
+/* ---------- TAB BUTTONS ---------- */
+.news-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.news-tab-btn {
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.news-tab-btn:hover {
+  background-color: #eee;
+}
+
+.active-tab {
+  background-color: #11171a;
+  color: #fff;
+  border-color: #11171a;
+  font-weight: 600;
+}
+
+/* ---------- PLACEHOLDER FOR NEWS CARDS ---------- */
+.news-cards-container {
+  margin-top: 4rem;
+  padding: 0 4rem;
+}

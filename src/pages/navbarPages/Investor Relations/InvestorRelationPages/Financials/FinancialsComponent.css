@@ -1,0 +1,124 @@
+.financials-container {
+  padding: 5% 4rem;
+  margin: 5% 0;
+  color: #0c1a2b;
+  font-family: "Inter", sans-serif;
+}
+
+.financials-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Tabs */
+.financials-tabs {
+  display: flex;
+  gap: 2rem;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.financials-tabs span {
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+  color: #7a7a7a;
+}
+
+.financials-tabs .active {
+  color: #00b14f;
+  border-bottom: 2px solid #00b14f;
+}
+
+/* Table Section */
+.financials-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.financials-header,
+.financials-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr 1fr 1.5fr;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.financials-header {
+  border-bottom: 2px solid #d9d9d9;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.financials-row {
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 0.95rem;
+  color: #0c1a2b;
+}
+
+.financials-row div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fy {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+}
+
+.quarter {
+  background-color: #d6f5d6;
+  color: #0c1a2b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.transcript span {
+  margin-right: 0.5rem;
+  color: #00b14f;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .financials-header,
+  .financials-row {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .financials-container {
+    padding: 5% 2rem;
+  }
+
+  .financials-tabs {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .financials-header {
+    display: none;
+  }
+
+  .financials-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    padding: 1rem 0;
+  }
+
+  .fy {
+    font-size: 1.1rem;
+  }
+}

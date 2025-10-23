@@ -1,0 +1,106 @@
+.distribution-section {
+  width: 100%;
+  background-color: #f5f8fa;
+}
+
+.distribution-container {
+  padding: 5% 4rem;
+  margin: 5% 0;
+  max-width: 1300px;
+  margin-inline: auto;
+}
+
+.distribution-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1b1b1b;
+  margin-bottom: 0.5rem;
+}
+
+.distribution-subheading {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.distribution-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.distribution-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.distribution-card:hover {
+  transform: translateY(-4px);
+}
+
+.distribution-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+}
+
+.distribution-card h3 {
+  font-size: 1.25rem;
+  color: #1b1b1b;
+  margin-bottom: 0.8rem;
+}
+
+.distribution-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.learn-link {
+  color: #00a651;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.learn-link:hover {
+  color: #008c45;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .distribution-container {
+    padding: 5% 2rem;
+  }
+
+  .distribution-grid {
+    gap: 1.5rem;
+  }
+
+  .distribution-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .distribution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .distribution-card img {
+    height: 200px;
+  }
+
+  .distribution-heading {
+    font-size: 1.8rem;
+  }
+}

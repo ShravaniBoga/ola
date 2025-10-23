@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import carousel1 from "../../assets/carosel1.webp";
 import carousel2 from "../../assets/carosel2.webp";
 import carousel3 from "../../assets/carosel3.webp";
@@ -10,6 +11,7 @@ import Button from "../../components/ui/Button";
 import "./Carousel.css";
 
 const Carousel = () => {
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
 
   const slides = [
@@ -80,7 +82,8 @@ const Carousel = () => {
         <img src={dark_logo} alt="OLA Electric Logo" />
         <GiHamburgerMenu
           className="hamburger-icon"
-          onClick={() => console.log("Menu clicked!")}
+          onClick={() => navigate("/menu")}
+          // onClick={() => console.log("Menu clicked!")}
         />
       </div>
 

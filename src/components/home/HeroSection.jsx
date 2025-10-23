@@ -1,6 +1,4 @@
 import React from "react";
-import dark_logo from "../../assets/dark_black_logo.svg";
-import { GiHamburgerMenu } from "react-icons/gi";
 import "./HeroSection.css";
 import Carousel from "./Carosel";
 import Cards from "./Cards";
