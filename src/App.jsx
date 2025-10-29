@@ -15,7 +15,9 @@ import Announcements from "./pages/navbarPages/Investor Relations/InvestorRelati
 import NewsEvents from "./pages/navbarPages/Investor Relations/InvestorRelationPages/NewsEvents/NewsEvents";
 import InvestorRelationsNavbar from "./pages/navbarPages/Investor Relations/InvestorRelationPages/InvestorRelationsNavbar/InvestorRelationsNavbar";
 import HamburgerMenu from "./pages/navbarPages/Investor Relations/InvestorRelationPages/hamburger menu/HamburgerMenu";
-import SignIn from "./pages/authentication/SignIn";
+// import SignIn from "./pages/authentication/SignIn";
+import SignupPage from "./pages/SignupPage/SignupPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
       {/* <HomePage /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/signin" element={<SignIn/>} /> {/* ✅ added */}
+        {/* <Route path="/signin" element={<SignIn />} /> */}
         <Route path="/scooters" element={<ScooterDropdown />} />
         <Route path="/motorcycles" element={<MotorcycleDropdown />} />
         {/* 🧱 Investor Relations Layout Route */}
@@ -37,6 +39,14 @@ function App() {
           <Route path="announcements" element={<Announcements />} />
           <Route path="news-events" element={<NewsEvents />} />
         </Route>
+        {/* ✅ New Auth Routes */}
+        <Route path="/login" element={<LoginPage role="User" />} />
+        <Route path="/login/admin" element={<LoginPage role="Admin" />} />
+        <Route
+          path="/login/corporate"
+          element={<LoginPage role="Corporate" />}
+        />
+        <Route path="/signup" element={<SignupPage />} />
         <Route path="/test-ride" element={<TestRidePage />} />
         <Route path="/order-now" element={<OrderNowPage />} />
         <Route path="/menu" element={<HamburgerMenu />} />

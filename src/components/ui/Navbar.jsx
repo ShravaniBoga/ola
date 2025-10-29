@@ -1,17 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { FaCircleUser } from "react-icons/fa6";
 import logo_white_text from "../../assets/ola_logo_whiteText_backBackground.svg";
 import ScooterDropdown from "../../pages/navbarPages/VehicleDropdown/Scooters/ScooterDropdown";
 import MotorcycleDropdown from "../../pages/navbarPages/VehicleDropdown/Motorcycles/MotorcycleDropdown";
 
 const Navbar = () => {
-  // const [menuOpen, setMenuOpen] = useState(false);
   const [showScooter, setShowScooter] = useState(false);
   const [showMotorcycle, setShowMotorcycle] = useState(false);
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
   const navigate = useNavigate();
+  const profileRef = useRef();
+
+  // ✅ Hide profile dropdown when clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (profileRef.current && !profileRef.current.contains(event.target)) {
+        setShowProfileMenu(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <nav className="navbar">
@@ -28,10 +40,7 @@ const Navbar = () => {
               onMouseEnter={() => setShowScooter(true)}
               onMouseLeave={() => setShowScooter(false)}
             >
-              <a
-                onClick={() => navigate("/scooters")}
-                style={{ cursor: "pointer" }}
-              >
+              <a style={{ cursor: "pointer" }}>
                 Scooters <MdKeyboardArrowDown className="arrow-icon" />
               </a>
               {showScooter && <ScooterDropdown />}
@@ -42,10 +51,7 @@ const Navbar = () => {
               onMouseEnter={() => setShowMotorcycle(true)}
               onMouseLeave={() => setShowMotorcycle(false)}
             >
-              <a
-                onClick={() => navigate("/motorcycles")}
-                style={{ cursor: "pointer" }}
-              >
+              <a style={{ cursor: "pointer" }}>
                 Motorcycles <MdKeyboardArrowDown className="arrow-icon" />
               </a>
               {showMotorcycle && <MotorcycleDropdown />}
@@ -70,7 +76,7 @@ const Navbar = () => {
         </div>
 
         {/* === Right Section === */}
-        <div className="action-group">
+        <div className="action-group" ref={profileRef}>
           <a
             onClick={() => navigate("/order-now")}
             className="order-now"
@@ -78,12 +84,32 @@ const Navbar = () => {
           >
             Order now
           </a>
+
+          {/* ✅ Profile Icon with dropdown */}
           <div
-            className="hamburger"
-            // onClick={() => setMenuOpen(!menuOpen)
-            onClick={() => navigate("/menu")}
+            className="user-icon"
+            onClick={() => setShowProfileMenu((prev) => !prev)}
+            style={{
+              cursor: "pointer",
+              fontSize: "1.8rem",
+              color: "white",
+              position: "relative",
+            }}
           >
-            <GiHamburgerMenu />
+            <FaCircleUser />
+
+            {/* Dropdown Menu */}
+            {showProfileMenu && (
+              <div className="profile-menu">
+                <p onClick={() => navigate("/login")}>Login as User</p>
+                <p onClick={() => navigate("/login/corporate")}>
+                  Login as Corporate
+                </p>
+                <p onClick={() => navigate("/login/admin")}>Login as Admin</p>
+                <hr className="profile-divider" />
+                <p onClick={() => navigate("/signup")}>Sign Up</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

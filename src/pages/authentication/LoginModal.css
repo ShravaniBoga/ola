@@ -9,90 +9,23 @@
 }
 
 .modal-container {
-  background: #fff;
+  background: white;
   border-radius: 12px;
-  padding: 40px;
-  width: 360px;
+  padding: 2rem;
   position: relative;
-  text-align: left;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.3s ease;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
 }
 
 .modal-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
   background: none;
   border: none;
-  position: absolute;
-  top: 14px;
-  right: 14px;
   cursor: pointer;
-  color: #333;
+  color: #444;
 }
 
-.modal-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #1c1c1c;
-  margin-bottom: 8px;
-}
-
-.modal-subtitle {
-  color: #6f6f6f;
-  font-size: 14px;
-  margin-bottom: 24px;
-}
-
-.phone-input {
-  display: flex;
-  align-items: center;
-  background-color: #f7f7f7;
-  border-radius: 8px;
-  padding: 10px 12px;
-  margin-bottom: 24px;
-}
-
-.flag {
-  font-size: 20px;
-}
-
-.code {
-  font-weight: 600;
-  margin: 0 8px;
-  color: #555;
-}
-
-.phone-input input {
-  border: none;
-  background: transparent;
-  flex: 1;
-  outline: none;
-  font-size: 15px;
-  color: #333;
-}
-
-.next-btn {
-  width: 100%;
-  background-color: #5e5e5e;
-  color: #fff;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
-  padding: 12px 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.next-btn:hover {
-  background-color: #1fad58;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.modal-close:hover {
+  color: #000;
 }
