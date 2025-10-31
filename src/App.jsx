@@ -16,8 +16,9 @@ import NewsEvents from "./pages/navbarPages/Investor Relations/InvestorRelationP
 import InvestorRelationsNavbar from "./pages/navbarPages/Investor Relations/InvestorRelationPages/InvestorRelationsNavbar/InvestorRelationsNavbar";
 import HamburgerMenu from "./pages/navbarPages/Investor Relations/InvestorRelationPages/hamburger menu/HamburgerMenu";
 // import SignIn from "./pages/authentication/SignIn";
-import SignupPage from "./pages/SignupPage/SignupPage";
-import LoginPage from "./pages/LoginPage/LoginPage";
+import SignupPage from "./pages/authentication/SignupPage/SignupPage";
+// import LoginPage from "./pages/LoginPage/LoginPage";
+import LoginRole from "./pages/authentication/LoginRole/LoginRole";
 
 function App() {
   return (
@@ -40,11 +41,11 @@ function App() {
           <Route path="news-events" element={<NewsEvents />} />
         </Route>
         {/* ✅ New Auth Routes */}
-        <Route path="/login" element={<LoginPage role="User" />} />
-        <Route path="/login/admin" element={<LoginPage role="Admin" />} />
+        <Route path="/login" element={<LoginRole role="User" />} />
+        <Route path="/login/admin" element={<LoginRole role="Admin" />} />
         <Route
           path="/login/corporate"
-          element={<LoginPage role="Corporate" />}
+          element={<LoginRole role="Corporate" />}
         />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/test-ride" element={<TestRidePage />} />

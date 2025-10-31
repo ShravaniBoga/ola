@@ -1,9 +1,9 @@
 import React from "react";
 // import LoginForm from "../components/auth/LoginForm";
-import "./LoginPage.css";
-import LoginForm from "../authentication/LoginForm";
+import "./LoginRole.css";
+import LoginForm from "../LoginForm";
 
-const LoginPage = ({ role = "User" }) => {
+const LoginRole = ({ role = "User" }) => {
   return (
     <div className="login-page">
       <LoginForm role={role} />
@@ -11,4 +11,4 @@ const LoginPage = ({ role = "User" }) => {
   );
 };
 
-export default LoginPage;
+export default LoginRole;
